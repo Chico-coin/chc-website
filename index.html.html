@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CHC Token — Official Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#00172b; --bg-2:#03284a; --card:rgba(255,255,255,0.03);
+      --glass:rgba(255,255,255,0.06); --muted:rgba(255,255,255,0.55);
+      --accent:#1D5CFF; --accent2:#4DB8FF;
+      font-family:'Inter',sans-serif;
+    }
+    body{margin:0;background:linear-gradient(var(--bg-1),var(--bg-2));color:white;padding:0}
+    a{text-decoration:none;color:inherit}
+
+    /* NAVBAR */
+    nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);
+        padding:14px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass)}
+    nav .menu{display:flex;gap:26px;font-weight:600;font-size:15px}
+    nav .menu a:hover{color:var(--accent2)}
+
+    /* SECTIONS */
+    section{padding:100px 40px}
+    .container{max-width:1200px;margin:0 auto}
+
+    /* HERO */
+    .hero{text-align:center;padding-top:120px;padding-bottom:160px}
+    .hero h1{font-size:54px;font-weight:800;margin:0}
+    .hero p{font-size:18px;color:var(--muted);margin-top:14px}
+    .btn-primary{background:var(--accent);padding:14px 26px;border-radius:10px;font-weight:700;font-size:16px;display:inline-block;margin-top:22px}
+
+    /* CARDS */
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+    .card{background:var(--card);padding:22px;border-radius:14px;border:1px solid var(--glass)}
+    h3{margin:0 0 12px 0}
+
+    /* DASHBOARD FROM PREVIOUS VERSION */
+    .dash-grid{display:grid;grid-template-columns:1fr 350px;gap:22px;margin-top:40px}
+    .metric-row{display:flex;gap:12px}
+    .metric{flex:1;padding:12px;border-radius:10px;border:1px solid var(--glass)}
+    .metric h4{margin:0;font-size:14px;color:var(--muted)}
+    .metric .val{margin-top:6px;font-size:20px;font-weight:700;color:white}
+
+    /* TOKENOMICS */
+    .alloc-row{display:flex;justify-content:space-between;margin-top:6px;font-size:14px}
+    .dot{width:12px;height:12px;border-radius:50%}
+
+    /* STAKING */
+    input,select{width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid var(--glass);color:white;margin-top:6px}
+    button{background:var(--accent);padding:12px 16px;border:none;border-radius:10px;font-weight:700;color:white;cursor:pointer}
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div style="font-weight:800;font-size:20px">CHC TOKEN</div>
+  <div class="menu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#staking">Staking</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <h1>The Next Generation Web3 Asset</h1>
+  <p>Fast • Secure • Stakable • Utility-Driven Token Built on BNB Chain (BEP-20)</p>
+  <a class="btn-primary" href="#dashboard">Enter Dashboard</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>About CHC Token</h2>
+    <div class="grid-3">
+      <div class="card"><h3>High-Speed</h3><p>Lightning-fast blockchain settlement.</p></div>
+      <div class="card"><h3>Secure Contract</h3><p>Fully verified smart contract on BSC.</p></div>
+      <div class="card"><h3>Web3 Utility</h3><p>Designed to power DApps & staking.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <h2>Key Features</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Staking Rewards</h3><p>Earn CHC by staking for flexible or fixed terms.</p></div>
+      <div class="card"><h3>Multi-Wallet</h3><p>Supports MetaMask, WalletConnect & more.</p></div>
+      <div class="card"><h3>Low Fees</h3><p>Runs on BNB Smart Chain for low gas costs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKENOMICS -->
+<section id="tokenomics">
+  <div class="container">
+    <h2>Tokenomics (100,000,000 CHC)</h2>
+
+    <div class="grid-3">
+      <div class="card"><strong>Total Supply:</strong> 100,000,000 CHC</div>
+      <div class="card"><strong>Circulating:</strong> 100% at launch</div>
+      <div class="card"><strong>Type:</strong> BEP-20</div>
+    </div>
+
+    <div class="card" style="margin-top:30px">
+      <h3>Allocation Breakdown</h3>
+      <div class="alloc-row"><span><span class="dot" style="background:#1D5CFF"></span> Staking Rewards</span> 35%</div>
+      <div class="alloc-row"><span><span class="dot" style="background:#4DB8FF"></span> Liquidity Pool</span> 20%</div>
+      <div class="alloc-row"><span><span class="dot" style="background:#6A5CFF"></span> Development</span> 20%</div>
+      <div class="alloc-row"><span><span class="dot" style="background:#FF8A65"></span> Marketing</span> 15%</div>
+      <div class="alloc-row"><span><span class="dot" style="background:#FFD54F"></span> Airdrop</span> 5%</div>
+      <div class="alloc-row"><span><span class="dot" style="background:#9CCC65"></span> Team Reserve</span> 5%</div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="container">
+    <h2>Dashboard</h2>
+
+    <div class="dash-grid">
+
+      <!-- LEFT -->
+      <div>
+        <div class="card">
+          <h3>CHC Price</h3>
+          <h1>$0.00</h1>
+          <div class="metric-row" style="margin-top:20px">
+            <div class="metric"><h4>Liquidity</h4><div class="val">$0</div></div>
+            <div class="metric"><h4>FDV</h4><div class="val">$0</div></div>
+          </div>
+          <div class="metric-row" style="margin-top:12px">
+            <div class="metric"><h4>Total Supply</h4><div class="val">100,000,000</div></div>
+            <div class="metric"><h4>Holders</h4><div class="val">0</div></div>
+          </div>
+
+          <canvas id="priceChart" style="margin-top:20px;height:260px"></canvas>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h3>Recent Transactions</h3>
+          <div class="muted">No transactions yet</div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <div class="card">
+          <h3>Tokenomics Chart</h3>
+          <canvas id="donut" style="height:240px"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAKING -->
+<section id="staking">
+  <div class="container">
+    <h2>Staking CHC</h2>
+
+    <div class="dash-grid">
+      <div>
+        <div class="card">
+          <h3>Stake CHC</h3>
+          <label>Amount</label>
+          <input type="number" placeholder="0">
