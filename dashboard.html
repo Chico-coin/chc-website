@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CHC Token - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="container small">
+      <div class="logo">◆</div>
+      <h1>CHC TOKEN</h1>
+    </div>
+  </header>
+
+  <main class="container main dashboard">
+    <section class="stats">
+      <div class="card big">
+        <h4>CHC Price</h4>
+        <div class="price">$0.00</div>
+        <div class="change">Price Change • 0.00%</div>
+        <canvas id="miniChart" height="80"></canvas>
+      </div>
+
+      <div class="card small">
+        <h4>Liquidity</h4>
+        <div>$0</div>
+      </div>
+
+      <div class="card small">
+        <h4>FDV</h4>
+        <div>$0</div>
+      </div>
+
+      <div class="card small">
+        <h4>Total Supply</h4>
+        <div>1,000,000 CHC</div>
+      </div>
+
+      <div class="card small">
+        <h4>Total Holders</h4>
+        <div>0</div>
+      </div>
+    </section>
+
+    <section class="pricechart card">
+      <h3>Price Chart</h3>
+      <canvas id="priceChart" height="220"></canvas>
+    </section>
+
+    <section class="transactions">
+      <h3>Recent Transactions</h3>
+      <div class="tx-list">
+        <div class="tx">0x1234...abcd</div>
+        <div class="tx">Starker 4ccc</div>
+      </div>
+    </section>
+
+    <section class="staking">
+      <div class="card stake">
+        <h3>Stake CHC</h3>
+        <label>Amount</label>
+        <input id="stakeInput" placeholder="0.0">
+        <div class="durations">
+          <label><input type="radio" name="dur" checked> Flexible</label>
+          <label><input type="radio" name="dur"> 30 days</label>
+          <label><input type="radio" name="dur"> 60 days</label>
+          <label><input type="radio" name="dur"> 90 days</label>
+        </div>
+        <button id="stakeBtn" class="btn primary">Stake</button>
+      </div>
+
+      <div class="card claim">
+        <h3>Claim Rewards</h3>
+        <p>Pending Rewards: 0 CHC</p>
+        <button class="btn primary">Claim CHC</button>
+      </div>
+    </section>
+
+    <div class="center"><a href="index.html" class="btn outline">Back to Landing</a></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Sample charts
+    const miniCtx = document.getElementById('miniChart').getContext('2d');
+    new Chart(miniCtx, {
+      type: 'line',
+      data: {
+        labels: Array.from({length: 20}, (_,i)=>i),
+        datasets: [{label:'', data: Array.from({length:20}, ()=>Math.random()*10+10), fill:true, tension:0.4}]
+      },
+      options: {responsive:true, plugins:{legend:{display:false}}, scales:{x:{display:false}}}
+    });
+
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['1H','4H','9D','60D','50D','90D','Age'],
+        datasets: [
+          {type:'line', label:'Price', data:[0.2,0.25,0.35,0.22,0.3,0.4,0.28], tension:0.3, fill:false},
+          {type:'bar', label:'Volume', data:[5,8,3,6,4,7,5], yAxisID:'v'}
+        ]
+      },
+      options: {
+        responsive:true,
+        scales:{
+          v:{position:'right', display:false}
+        },
+        plugins:{legend:{position:'top'}}
+      }
+    });
+  </script>
+</body>
+</html>
