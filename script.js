@@ -1,1 +1,0 @@
-/* No JS required for this theme */
