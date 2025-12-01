@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CHC Dashboard</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-<h1>CHC Dashboard</h1>
-<p>Real-Time Token Data</p>
-<a href="index.html">Back to Landing</a>
+
+<div class="hero small">
+    <h1>CHC Dashboard</h1>
+    <p>Real-Time Token Data & Analytics</p>
+</div>
+
+<div class="grid-4">
+    <div class="card">CHC Price<br><strong>$0.00</strong></div>
+    <div class="card">Liquidity<br><strong>$0</strong></div>
+    <div class="card">FDV<br><strong>$0</strong></div>
+    <div class="card">Total Supply<br><strong>100,000,000</strong></div>
+</div>
+
+<div class="chart-section">
+    <h2>Price Chart</h2>
+    <canvas id="chcChart"></canvas>
+</div>
+
+<img src="assets/hologram.png" class="hologram" />
+
+<div class="goto-dashboard">
+    <a href="index.html" class="btn secondary">Back to Landing</a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
