@@ -1,1 +1,0 @@
-console.log('CHC Web Project Loaded');
