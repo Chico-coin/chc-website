@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CHC Dashboard</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="hero-small">
+  <img src="assets/logo.png" class="logo small" alt="CHC Logo" />
+  <h1>CHC Dashboard</h1>
+  <p class="subtitle">Real-Time Token Data & Analytics</p>
+  <a href="index.html" class="btn outline">Back</a>
+</header>
+
+<main class="dashboard">
+  <section class="stats-grid">
+    <div class="stat card">CHC Price<br><strong id="price">$0.00</strong></div>
+    <div class="stat card">Liquidity<br><strong id="liquidity">$0</strong></div>
+    <div class="stat card">FDV<br><strong id="fdv">$0</strong></div>
+    <div class="stat card">Total Supply<br><strong id="supply">100,000,000</strong></div>
+  </section>
+
+  <section class="charts">
+    <div class="chart-card card">
+      <h3>Price Chart</h3>
+      <canvas id="priceChart"></canvas>
+    </div>
+
+    <aside class="side card tokenomics-side">
+      <h3>Tokenomics</h3>
+      <canvas id="donutChart" width="260" height="260"></canvas>
+      <ul class="legend">
+        <li><span class="dot" style="background:#3b82f6"></span> Liquidity — 10%</li>
+        <li><span class="dot" style="background:#7c3aed"></span> Staking Rewards — 30%</li>
+        <li><span class="dot" style="background:#06b6d4"></span> Treasury / Ecosystem — 40%</li>
+        <li><span class="dot" style="background:#f59e0b"></span> Burn — 10%</li>
+        <li><span class="dot" style="background:#ef4444"></span> Team / Dev Vesting — 10%</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="recent card">
+    <h3>Recent Transactions</h3>
+    <input type="text" class="input" placeholder="0x1234...abcd" />
+  </section>
+
+  <div class="holo-wrap">
+    <img src="assets/hologram.png" class="hologram" alt="hologram" />
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
