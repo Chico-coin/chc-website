@@ -1,1 +1,88 @@
-body{background:#071a3d;color:#fff;font-family:sans-serif;text-align:center;padding:40px;}
+body {
+    background: #041230;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.hero-section, .hero.small {
+    padding: 40px 20px;
+}
+
+.sub {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.btn-group { margin-top: 20px; }
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+}
+
+.primary { background: #1e90ff; color: #fff; }
+.secondary { border: 1px solid #fff; color: #fff; }
+
+.section { padding: 40px 20px; }
+
+.grid-4, .grid-3 {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform: translateY(20px); }
+    to { opacity:1; transform: translateY(0); }
+}
+
+.tokenomics-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.tokenomics-img {
+    width: 180px;
+}
+
+.hologram {
+    width: 250px;
+    margin-top: 20px;
+    animation: holo 2s infinite ease-in-out;
+}
+
+@keyframes holo {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.5; transform: scale(0.95); }
+}
+
+.supply {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
